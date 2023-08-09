@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "League Spartan", sans-serif;
+  src: url("./fonts/LeagueSpartan-Bold.woff2"),
+    url("./fonts/LeagueSpartan-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan", sans-serif;
+  src: url("./fonts/LeagueSpartan-Medium.woff2"),
+    url("./fonts/LeagueSpartan-Bold.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan", sans-serif;
+  src: url("./fonts/LeagueSpartan-Regular.woff2"),
+    url("./fonts/LeagueSpartan-Bold.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+}
+body {
+  background-color: #f2efef;
+  color: black;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--White);
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+.container {
+  padding: 2.5rem 1rem;
+  width: min(100%, 500px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem;
+  margin-inline: auto;
+}
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0;
+}
+#about > h1 {
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#about p {
+  line-height: 1.5em;
+  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.7em;
+}
+#rates {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 5rem; */
+  padding: 1rem auto;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 10px;
+}
+.Stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.rate p {
+  text-align: center;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4em;
+  color: var(--Very-Dark-Magenta);
+}
+#buyers-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.buyer {
+  padding: 1.5rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  background-color: var(--Very-Dark-Magenta);
+  color: white;
+  border-radius: 10px;
+  max-height: 300px;
+}
+.buyer-info {
+  display: flex;
+  gap: 1rem;
+}
+.buyer-info img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.buyer-info p {
+  margin: 3px 0;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.soft-pink {
+  color: var(--Soft-Pink);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+  bottom: 2vh;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 30% 50%;
+    width: 100vw;
+    padding: 10vw 6vw;
+    row-gap: 5rem;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: -2rem;
+  }
+  #about h1 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  #about p {
+    text-align: left;
+  }
+  #buyers-feedback {
+    flex-direction: row;
+    width: 100%;
+    grid-column: -1/1;
+
+    height: 40vh;
+  }
+  #Rates {
+    margin-top: 3rem;
+  }
+  .rate {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .Reviews {
+    align-self: flex-start;
+    padding-inline: 2rem;
+  }
+  .Report-Guru {
+    align-self: center;
+    padding-inline: 2rem;
+  }
+  .BestTech {
+    align-self: flex-end;
+    padding-inline: 2rem;
+  }
+  .buyer.one {
+    align-self: flex-start;
+  }
+  .buyer.two {
+    align-self: center;
+  }
+  .buyer.three {
+    align-self: flex-end;
+  }
+}
